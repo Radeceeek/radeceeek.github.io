@@ -1,4 +1,13 @@
+body{
+    width: 1200px;
+    text-align: center;
+}
 footer{
     margin: auto;
     padding: auto;
+    text-align: center;
+}
+nav ul li{
+    display: block;
+    
 }
