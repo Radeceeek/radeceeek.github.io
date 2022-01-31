@@ -3,8 +3,7 @@ html,body{
   height: 100%;
   width: 100%;
   place-items: center;
-  background: rgb(47, 52, 64)
-  
+  background: rgb(47, 52, 64)  
 }
 a{
     text-decoration: none;
@@ -66,6 +65,7 @@ a{
     max-width: 1080px;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 220px;
 }
 section{
     display:block;
@@ -96,6 +96,63 @@ h1, h2{
     margin-bottom:0,25em;
     color: #D8DEE9;
 }
+
+
+
+.zkusebni{
+  height: 100vh;
+  margin: 0;
+  color: white;
+  font-family: Verdana;
+  width: 100%;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.feature{
+  display: grid;
+  height: 100vh;
+  place-items: center;
+  overflow: hidden;
+  position: relative;
+  border-right: 1px solid rgba(255,255,255, 0.1);
+}
+.feature a:hover{
+  opacity: 1;
+}
+
+.feature-img:hover{
+  opacity: 1;
+  transform: scale(1);
+}
+
+.content:hover{
+  transform: scale(1.3);
+  transform-origin: left 50%;
+  transition: .3s;
+}
+
+.feature h3{
+  font-size: 1.3rem;
+  z-index: 300;
+}
+.content{
+  width: 70%;
+  margin: 0 auto;
+}
+
+.feature-img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  opacity: 0;
+  transform: scale(1.2);
+  transition: transform 5s, opacity .3s;
+}
+
+
 
 
 
