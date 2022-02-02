@@ -1,105 +1,10 @@
-html,body{
+body{
   display: grid;
   height: 100%;
-  width: 100%;
-  place-items: center;
-  background: rgb(47, 52, 64)  ;
+  width: 100% ;
+  background: #2E3440 ;
+  color: white;
 }
-a{
-    text-decoration: none;
-    color: #000;
-}
-.wrapper{
-  display: inline-flex;
-  
-}
-.wrapper .icon{
-  margin: 0 20px;
-  text-align: center;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  position: relative;
-  z-index: 2;
-  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-.wrapper .icon span{
-  display: block;
-  height: 60px;
-  width: 60px;
-  background: #fff;
-  border-radius: 50%;
-  position: relative;
-  z-index: 2;
-  box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
-  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-.wrapper .icon span i{
-  line-height: 60px;
-  font-size: 25px;
-}
-
-.wrapper .icon:hover span{
-  color: #fff;
-}
-.wrapper .icon:hover span,
-.wrapper .icon:hover {
-  text-shadow: 0px -1px 0px rgba(0,0,0,0.4);
-}
-
-.wrapper .twitter:hover span,
-.wrapper .twitter:hover .tooltip{
-  background: #46C1F6;
-}
-.wrapper .instagram:hover span,
-.wrapper .instagram:hover .tooltip{
-  background: #e1306c;
-}
-.wrapper .github:hover span,
-.wrapper .github:hover .tooltip{
-  background: #333;
-}
-
-.text{
-    max-width: 1080px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 220px;
-    font-size: 30px;
-}
-section{
-    display:block;
-    margin: 0px;
-    margin-top: 20px;
-}
-article{
-    padding: 10px;
-    text-align: center;
-    margin-bottom: 20px;
-    padding: 50px;
-    box-shadow: 8px 8px 8px 8px #3B4252 ;
-    border: solid 2px #4C566A;
-    border-radius: 70px 40px 30px 40px ;
-}
-main{
-    padding: none;
-}
-h1, h2{
-   font-family: Verdana;
-   font-size: 35px;
-   text-align: center;
-   text-shadow: 0px 2px #3B4252;
-   color:#D8DEE9
-}
-.about-me p{
-    margin-top:0,25em;
-    margin-bottom:0,25em;
-    color: #D8DEE9;
-}
-
-
 
 .zkusebni{
   height: 100vh;
@@ -107,10 +12,12 @@ h1, h2{
   color: white;
   font-family: Verdana;
   width: 100%;
+  
 }
 .container{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    height: 100vh;
 }
 .feature{
   display: grid;
@@ -118,38 +25,72 @@ h1, h2{
   place-items: center;
   overflow: hidden;
   position: relative;
-  border-right: 1px solid rgba(255,255,255, 0.1);
+  border-right: 5px solid black;
 }
-.feature a:hover{
+
+.feature .feature-img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+  transform: scale(1.2); 
+  transition: transform 5s, opacity .3s;
+}
+.feature h3{
+  font-size: 1.3rem;
+}
+
+.feature .content{
+  width:  70%;
+  margin:  0 auto;
+  transition: transform .3s;
+}
+
+.feature a{
+  background: white;
+  color: black;
+  text-decoration: none;
+  padding: 0.3em  0.7em;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  opacity: 0;
+  transition: opacity .3s;
+}
+
+.feature:hover a{
   opacity: 1;
 }
 
-.feature-img:hover{
+.feature:hover .feature-img{
   opacity: 1;
   transform: scale(1);
 }
 
-.content:hover{
+.feature:hover .content{
   transform: scale(1.3);
-  transform-origin: left 50%;
-  transition: .3s;
+  transform-origin:left 50% ;
 }
 
-.feature h3{
-  font-size: 1.3rem;
-  z-index: 300;
-}
-.content{
-  width: 70%;
-  margin: 0 auto;
+@media only screen and (min-width:1100px)  
+{
+  .feature h3{
+    font-size: 2rem;
+  }
+  a{
+    font-size: .9rem;
+  }
 }
 
-.feature-img{
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  opacity: 0;
-  transform: scale(1.2);
-  transition: transform 5s, opacity .3s;
+@media only screen and (min-width:1600px)
+{
+  .feature h3{
+    font-size: 2.7rem;
+  }
+  a{
+    font-size: 1.3rem;
+  }
 }
+
+
